@@ -29,7 +29,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
-gem "simple_form", "~> 5.1.0"
+gem "simple_form", "~> 5.4.1"
 gem "redis", "~> 4.0"
 gem "devise"
 
