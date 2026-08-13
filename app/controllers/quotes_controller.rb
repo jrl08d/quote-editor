@@ -13,7 +13,6 @@ class QuotesController < ApplicationController
   end
 
   def create
-    # Only this first line changes to make sure the association is created
     @quote = current_company.quotes.build(quote_params)
 
     if @quote.save
@@ -22,7 +21,7 @@ class QuotesController < ApplicationController
         format.turbo_stream
       end
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,7 +32,6 @@ class QuotesController < ApplicationController
     if @quote.update(quote_params)
       redirect_to quotes_path, notice: "Quote was successfully updated."
     else
-      # Add `status: :unprocessable_entity` here
       render :edit, status: :unprocessable_entity
     end
   end
