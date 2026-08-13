@@ -31,6 +31,7 @@ gem "solid_queue"
 gem "solid_cable"
 gem "simple_form", "~> 5.1.0"
 gem "redis", "~> 4.0"
+gem "devise"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
